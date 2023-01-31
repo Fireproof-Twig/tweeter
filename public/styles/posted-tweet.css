@@ -1,0 +1,49 @@
+article {
+  margin-top: 1em;
+  background-color: aqua;
+  border: solid;
+}
+
+article:hover {
+  box-shadow: 10px 5px 5px red;
+}
+
+article.tweet header {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: aqua;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweet .content {
+  width: 90%;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+article.tweet footer {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.handle {
+  color: gray;
+  font-family: 'Bungee', sans-serif;
+}
+
+.line {
+  width: 95%;
+  height: 3px;
+  background-color: black;
+  margin: auto;
+}
+
+article.tweet i:hover {
+  color: yellow
+}
