@@ -9,13 +9,14 @@ article:hover {
 }
 
 article.tweet header {
-  padding-left: 1em;
-  padding-right: 1em;
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
   background-color: aqua;
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 article.tweet .content {
@@ -46,4 +47,8 @@ article.tweet footer {
 
 article.tweet i:hover {
   color: yellow
+}
+
+.handle {
+  margin-left: auto
 }

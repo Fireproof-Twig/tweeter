@@ -10,7 +10,7 @@ $(document).ready(function() {
   // document.addEventListener("click", () => {
   //   alert("You clicked somewhere on tweeter");
   // });
-  console.log("bonjour")
+  // console.log("bonjour")
   let maximumLength = 140;
   textArea = $('#tweet-text');
   textArea.on('input', function() {
