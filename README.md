@@ -18,4 +18,4 @@ Tweeter is a simple, single-page Twitter clone.
 ## Screenshots
 
 !["Wide screen site look"](https://github.com/Fireproof-Twig/tweeter/blob/master/docs/wide-screen.png?raw=true)
-!["Smaller screen site look"] (https://github.com/Fireproof-Twig/tweeter/blob/master/docs/small-screen.png?raw=true)
+!["Smaller screen site look"](https://github.com/Fireproof-Twig/tweeter/blob/master/docs/small-screen.png?raw=true)
