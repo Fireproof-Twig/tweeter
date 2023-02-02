@@ -26,4 +26,10 @@ nav {
 .fa-angles-down:before {
   color: red;
 }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    align-self: baseline;
+  }
+}
  

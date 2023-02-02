@@ -12,3 +12,14 @@ header {
   background-color: #0b005e;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
+
+@media only screen and (min-width: 1024px) {
+  .top-header{
+    width: 45%;
+    height: 400px;
+    margin-top: 200px;
+    align-self:flex-start;
+    margin-left: 1em;
+    /* margin-right: 1em; */
+  }
+}
