@@ -44,6 +44,7 @@ $(document).ready(function () {
     const safeHTML = `<p>${escape(content)}</p>`;
 
     let createdAt = tweet.created_at;
+    createdAt = timeago.format(createdAt);
     // if (content.text.length > 140) {
     //   return alert("message too long");
     // }
@@ -146,6 +147,7 @@ $(document).ready(function () {
       success: function () {
         $("#tweets-container").empty();
         loadtweets();
+        $("#tweet-text").val("");
       },
     }).done(function () {
       console.log("done");

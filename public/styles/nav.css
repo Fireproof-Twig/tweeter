@@ -22,3 +22,8 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
+.fa-angles-down:before {
+  color: red;
+}
+ 
