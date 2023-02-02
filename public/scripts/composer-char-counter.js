@@ -1,13 +1,6 @@
-$(document).ready(function () {
-  // const textArea = document.getElementById("tweet-text")
-  // const printMessage = () => {
-  //   console.log("experimented with text area")
-  // }
+// Counter functionality
 
-  // document.addEventListener("click", () => {
-  //   alert("You clicked somewhere on tweeter");
-  // });
-  // console.log("bonjour")
+$(document).ready(function () {
   let maximumLength = 140;
   textArea = $("#tweet-text");
   textArea.on("input", function () {
@@ -21,8 +14,4 @@ $(document).ready(function () {
       counter.val(remainingCharacter);
     }
   });
-
-  // textArea.addEventListener('click', () => {
-  //   alert("hello there")
-  // });
 });

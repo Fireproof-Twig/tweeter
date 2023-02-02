@@ -39,8 +39,6 @@ https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script> -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
@@ -51,7 +49,7 @@ https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght
   <nav>
     <span class="logo-box">tweeter</span>
     <div class="right-box">
-      <span>Write a new tweet</span>
+      <button class="compose-pointless-button">Write a new tweet</button>
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
@@ -61,7 +59,7 @@ https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght
     </div>
     <br>
     <div>
-      <h2>Chris</h2>
+      <h2>Christina</h2>
     </div>
   </header>
 
@@ -70,7 +68,6 @@ https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght
     <section class="new-tweet">
       <div class="error-long">Too many characters</div>
       <div class="error-nothing">Tweet is blank</div>
-      <!-- <h2>Compose Tweet</h2> -->
       <form class="new-tweet-form" action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -81,25 +78,7 @@ https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght
       </form>
     </section>
     <section id="tweets-container">
-      <!-- <article class="tweet">
-        <header>
-          <span>avatar</span>
-          <span class="name">Name</span>
-          <span class="handle">tweeter handle</span>
-        </header>
-        <span class="content">hello everyone</span>
-        <div class="line"></div>
-        <footer>
-          <span>posted days ago</span>
-          <span>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </span>
-        </footer> -->
-      </article>
     </section>
   </main>
 </body>
-
 </html>

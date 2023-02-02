@@ -10,6 +10,10 @@ nav {
   padding-right: 1.5em;
 }
 
+.compose-pointless-button{
+  background-color: orangered;
+}
+
 .logo-box {
   display: flex;
   font-family: Bungee, sans-serif;
