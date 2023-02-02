@@ -5,8 +5,6 @@
  */
 
 $(document).ready(function () {
-  const time = format(1544666010224);
-  console.log(time);
   // const data = [
   //   {
   //     user: {
@@ -31,18 +29,34 @@ $(document).ready(function () {
   //     created_at: 1461113959088,
   //   },
   // ];
-
+  $(".error-long").hide();
+  $(".error-nothing").hide();
+  $(".error-long").slideUp();
+  $(".error-nothing").slideUp();
   const createTweetElement = function (tweet) {
     let user = tweet.user;
-    let content = tweet.content;
+    let content = tweet.content.text;
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+    const safeHTML = `<p>${escape(content)}</p>`;
+
     let createdAt = tweet.created_at;
+    // if (content.text.length > 140) {
+    //   return alert("message too long");
+    // }
+    // if (!content.text) {
+    //   return alert("No message");
+    // }
     let $tweet = $(`<article class="tweet">
     <header>
       <img src="${user.avatars}"/>
       <span>${user.name}</span>
       <span class="handle">${user.handle}</span>
     </header>
-    <span class="content">${content.text}</span>
+    <span class="content">${safeHTML}</span>
     <div class="line"></div>
     <footer>
       <span>${createdAt}</span>
@@ -60,7 +74,7 @@ $(document).ready(function () {
     // loops through tweets
     for (tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
@@ -69,7 +83,7 @@ $(document).ready(function () {
       url: "http://localhost:8080/tweets",
       method: "GET",
       success: function (data) {
-        console.log(data);
+        // console.log(data);
         renderTweets(data);
       },
     });
@@ -114,15 +128,25 @@ $(document).ready(function () {
 
   $(".new-tweet-form").submit(function (event) {
     event.preventDefault();
-    console.log(this);
     const postUrl = "/tweets";
     const method = "POST";
     const data = $(this).serialize();
-    console.log(data);
+    if ($("#positiveCounter").val() === "140") {
+      return $(".error-nothing").slideDown();
+    } else if ($("#positiveCounter").val() <= 0) {
+      return $(".error-long").slideDown();
+    } else {
+      $(".error-long").slideUp();
+      $(".error-nothing").slideUp();
+    }
     $.ajax({
       url: postUrl,
       method,
       data,
+      success: function () {
+        $("#tweets-container").empty();
+        loadtweets();
+      },
     }).done(function () {
       console.log("done");
     });

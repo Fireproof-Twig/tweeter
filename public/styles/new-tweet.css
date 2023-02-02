@@ -37,3 +37,19 @@ button {
   font-family: 'Bungee', sans-serif;
   color: black;
 }
+.error-long {
+  width: 100%;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 20px 30px;
+  margin-top: 1em;
+}
+.error-nothing {
+  width: 100%;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 20px 30px;
+  margin-top: 1em;
+}
