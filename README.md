@@ -14,3 +14,8 @@ Tweeter is a simple, single-page Twitter clone.
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Wide screen site look"](https://github.com/Fireproof-Twig/tweeter/blob/master/docs/wide-screen.png?raw=true)
+!["Smaller screen site look"] (https://github.com/Fireproof-Twig/tweeter/blob/master/docs/small-screen.png?raw=true)
